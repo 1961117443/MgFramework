@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "菜单管理";
+    Layout = "~/Views/Shared/_Edit_Base.cshtml";
+}
+
+@section toolbar{ 
+    <a id="btn_add" data-options="iconCls:'bill-add'">新增</a>  
+}
+ 
+
+  
+<table id="masterGrid">
+    <thead>
+        <tr>
+            <th data-options="field:'Id',formatter:menuManager.formatOper" width="140px;"></th>
+            <th data-options="field:'MenuName'">菜单名称</th>
+            <th data-options="field:'CustomerID_Code'">上级菜单</th>
+            <th data-options="field:'CustomerID_Name'">菜单类型</th>
+            <th data-options="field:'DeliveryMethod'">送货方式</th>
+            <th data-options="field:'PackingID_PackingName'">Url</th>
+            <th data-options="field:'Sort'">顺序</th>
+            <th data-options="field:'Remark'">备注</th>
+        </tr>
+    </thead>
+</table>  
+
+@section scripts{ 
+<script src="~/Scripts/04uijs/menu.js?v=@ViewBag.ts"></script>
+<script>
+    $(document).ready(function () {
+        menuManager.Init();
+    }
+    ); 
+</script> 
+    }

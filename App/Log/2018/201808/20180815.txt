@@ -1,0 +1,8 @@
+
+ 
+记录时间：2018-08-15 09:56:22,667 
+线程ID:[9] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 

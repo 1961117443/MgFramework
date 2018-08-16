@@ -1,0 +1,174 @@
+﻿@using Mg.IOSerialize.Serialize
+@using App.ViewModel
+@model VD_SalesOrder
+
+@{
+    ViewBag.Title = Model.AutoID == 0 ? "新增页面" : "编辑页面";
+    Layout = "~/Views/Shared/_Edit_Base.cshtml";
+}
+
+
+<style type="text/css">
+    *,
+    *:before,
+    *:after {
+        box-sizing: unset;
+    }
+
+    .layui-form input:disabled, select:disabled, textarea:disabled {
+        background-color: #dddddd
+    }
+</style>
+@section toolbar{
+    <div class="layui-btn-group">
+        @{
+            var module = ViewData["CustomModule"] as IModule;
+            if (module != null)
+            {
+                int i = 0;
+                foreach (var btn in module.Buttons.Where(w => (w.ButtonType & (int)module.ModuleType) == (int)module.ModuleType).ToList())
+                {
+
+                    if ((btn.EnableState & module.DataState) == module.DataState)
+                    {
+                        i++;
+                         <div class="layui-inline">
+                        <a class="layui-btn @(i%2==0? "layui-btn-danger":"")" onclick="@(btn.JsEvent)('@Model.Id');" lay-filter="@btn.Id">@btn.ButtonName</a>
+                             </div>
+                        }
+                    }
+                }
+            }
+}
+</div>
+<div>
+    <form class="layui-form" method="post" id="orderDetailForm" lay-filter="orderDetailForm">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label" style="color:#ff0000">订单号</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="BillCode" readonly lay-verify="required" autocomplete="off" placeholder="可不填,自动生成" lay-filter="BillCode" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label" style="color:#ff0000">订单日期</label>
+                <div class="layui-input-inline">
+                    <input type="datetime" id="OrderDate" name="OrderDate" placeholder="yyyy-MM-dd" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">铝锭价日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="AluminumPriceDate" name="AluminumPriceDate" class="layui-input" placeholder="yyyy-MM-dd" />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">预交日期</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="AcceptDate" name="AcceptDate" class="layui-input" placeholder="yyyy-MM-dd" />
+                </div>
+            </div>
+            @*<div class="layui-inline">
+            <label class="layui-form-label">包装方式</label>
+            <div class="layui-input-inline">
+                <input type="text" name="PackingID_PackingName" class="layui-input" />
+            </div>
+        </div>*@
+        </div>
+        @*第二行*@
+        <div class="layui-form-item">
+
+            <div class="layui-inline">
+                <label class="layui-form-label" style="color:#ff0000">客户编号</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="CustomerID_Code" ondblclick="orderDetail.Events.ChooseCustomer();" autocomplete="off" placeholder="双击选择客户" name="CustomerID_Code" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label" style="color:#ff0000">客户名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="CustomerID_Name" name="CustomerID_Name" readonly class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">客户PO</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="CustomerPO" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">订单类型</label>
+                <div class="layui-input-inline">
+                    <select name="OrderType" lay-filter="OrderLevel">
+                        <option value=""></option>
+                        <option selected>本厂</option>
+                        <option>国内</option>
+                        <option>国外</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">所属工程</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="Project" class="layui-input" />
+                </div>
+            </div>
+            
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">备注</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" class="layui-textarea" name="Remark"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <input type="text" name="Id" class="layui-hide">
+            <input type="text" name="AutoID" class="layui-hide">
+            <input type="text" name="CustomerID" class="layui-hide">
+            <input type="text" name="PackingID" class="layui-hide">
+        </div>
+
+    </form>
+</div>
+
+
+<table id="gridDetailList" lay-filter="gridDetailList"></table>
+
+<script type="text/html" id="barDetailList"> 
+    @{
+        var m = ViewData["CustomModule"] as IModule;
+        <div class="layui-btn-group">
+            <button class="layui-btn layui-btn-primary layui-btn-xs" @(m!=null && m.DataState==(int)DataState.Browse?"disabled":"") lay-event="edit">编辑</button>
+            {{#if (d.SalesOrderTraceCode && d.SalesOrderTraceCode.indexOf('-')==-1){  }}
+            <button class="layui-btn layui-btn-primary layui-btn-xs" @(m!=null && m.DataState==(int)DataState.Browse?"disabled":"") lay-event="del">删行</button>
+            {{# } }}
+            <button class="layui-btn layui-btn-primary layui-btn-xs" @(m!=null && m.DataState==(int)DataState.Browse?"disabled":"") lay-event="copy">复制</button>
+        </div>
+    }
+</script>
+
+
+@section scripts{
+    <script src="~/Scripts/04uijs/order.js?v=@ViewBag.ts"></script>
+
+
+    <script>
+
+
+        orderDetail.model = JSON.parse('@Html.Raw(JsonHelper.ToJson(ViewData["CustomModule"]))');
+        if (orderDetail.model == undefined) {
+            orderDetail.model = {};
+        }
+       // console.log(orderDetail.model);
+        orderDetail.model.data=  JSON.parse('@Html.Raw(JsonHelper.ToJson(Model))');
+         $(document).ready(
+             function () {
+                 orderDetail.Init();
+             }
+         );
+    </script>
+
+
+}

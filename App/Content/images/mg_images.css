@@ -1,0 +1,33 @@
+﻿/*16x16*/
+.bill-editor {
+    background: url('mg_images/16x16/editor.png') no-repeat center center;
+}
+.bill-browse {
+    background: url('mg_images/16x16/more.png') no-repeat center center;
+}
+.bill-delete {
+    background: url('mg_images/16x16/empty.png') no-repeat center center;
+}
+
+.bill-add {
+    background: url('mg_images/16x16/addition.png') no-repeat center center;
+}
+
+.bill-save {
+    background: url('mg_images/16x16/document.png') no-repeat center center;
+}
+
+.bill-audit {
+    background: url('mg_images/16x16/right.png') no-repeat center center;
+}
+.bill-back {
+    background: url('mg_images/16x16/return.png') no-repeat center center;
+}
+
+.bill-copy {
+    background: url('mg_images/16x16/interactive.png') no-repeat center center;
+}
+
+.bill-ok {
+    background: url('mg_images/16x16/success.png') no-repeat center center;
+}

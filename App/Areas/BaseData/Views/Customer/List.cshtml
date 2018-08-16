@@ -1,0 +1,62 @@
+﻿@using Mg.Framework
+@model IBillViewModel
+@{
+    Layout = "~/Views/Shared/_Edit_Base.cshtml";
+}
+<input id="q_search" class="easyui-searchbox" style="width:300px" data-options="searcher:quickSearch,menu:'#mm'" />
+ 
+
+<div id="mm" style="width:150px">
+    <div data-options="name:''">查询内容</div> 
+    @Html.Raw(Model?.QuickSearchItemHtml)
+</div>
+
+
+
+
+<table id="masterGrid">
+    <thead>
+        <tr>
+            <th hidden="hidden" data-options="field:'Id'"></th>
+            <th data-options="field:'Code'">客户编号</th>
+            <th data-options="field:'Name'">客户名称</th>
+        </tr>
+    </thead>
+</table>
+
+
+
+
+@section scripts{
+    <script>
+        var dialog = {};
+        $(document).ready(function () {  
+            $("#masterGrid").datagrid({
+                fit: false, border: true, singleSelect: true, rownumbers: true, remoteSort: false, cache: false, method: 'get', idField: 'Id',
+                queryParams: { _t: com.settings.timestamp(), keyword: "" },
+                pagination: true, pageList: [5, 10, 15, 20, 30, 50, 100], pageSize:'@Model.PageSize',
+                url: '/BaseData/Customer/GetList',
+                onLoadSuccess: function (data) {
+                    //$("a[name='edit']").linkbutton({ text: '', plain: true, iconCls: 'bill-editor' });
+                    //$("a[name='delete']").linkbutton({ text: '', plain: true, iconCls: 'bill-delete' });
+                    //$("a[name='view']").linkbutton({ text: '', plain: true, iconCls: 'bill-browse' });
+                    //$("a[name='audit']").linkbutton({ text: '', plain: true, iconCls: 'bill-audit' });
+                    //$(this).datagrid('fixRowHeight');
+                },
+            }); 
+        }
+        );
+        function quickSearch(v, n) {
+            var p = [{ FieldName: n, SearchValue: v }];
+            search_data(p);
+        }; 
+
+        function search_data(data) {
+            var q = { _t: com.settings.timestamp() };
+            if (data) {
+                q.keyword = JSON.stringify(data);
+            }
+            $('#masterGrid').datagrid('reload', q);
+        }
+    </script>
+}

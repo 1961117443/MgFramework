@@ -1,0 +1,135 @@
+﻿@using Mg.IOSerialize.Serialize
+@using Mg.Framework
+@model IBillViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/Scripts/05layui/layui-v2.3.0/layui/css/layui.css" rel="stylesheet" media="all" />
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+<body>
+    <div class="layui-form qTable">
+        @{
+            var qs = ViewData["QuickSearchColumn"] as string;
+            if (!string.IsNullOrEmpty(qs))
+            {
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <select id="qKey" lay-verify="">
+                            @Html.Raw(qs)
+                        </select>
+                    </div>
+                    <div class="layui-inline">
+                        <input class="layui-input" name="id" id="qValue" autocomplete="off">
+                    </div>
+                    <div class="layui-inline">
+                        <button class="layui-btn" data-type="reload">搜索</button>
+                    </div>
+                </div>
+            }
+        }
+        @*<div class="layui-form qTable">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <select id="qKey" lay-verify="">
+                        <option value="">查询字段</option>
+                        @Html.Raw(ViewData["QuickSearchColumn"] ?? "")
+                    </select>
+                </div>
+                <div class="layui-inline">
+                    <input class="layui-input" name="id" id="qValue" autocomplete="off">
+                </div>
+                <div class="layui-inline">
+                    <button class="layui-btn" data-type="reload">搜索</button>
+                </div>
+            </div>*@
+        </div>
+
+
+        @{
+            var columns = ViewData["ViewColumn"] as List<object>;
+            var url = ViewData["DataUrl"];
+            <table class="layui-hide" id="dialogGrid" lay-filter="dialogGrid" lay-data="{url: '@url'}">
+                <thead>
+                    <tr>
+                        @{
+                            if (columns != null)
+                            {
+                                foreach (var col in columns)
+                                {
+                                    <th lay-data="@JsonHelper.ToJson(col)"></th>
+                                }
+                            }
+                        }
+                    </tr>
+                </thead>
+            </table>
+        }
+        <script src="~/Scripts/05layui/layui-v2.3.0/layui/layui.js"></script>
+        <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+        <script>
+            var getData = function () { };
+
+            layui.use('table', function () {
+                var table = layui.table;
+
+                //方法级渲染
+                table.init("dialogGrid",
+                    {
+                        id: 'dialogGrid'
+                        , page: true
+                        , height: 'full-80'
+                    });
+
+                var $ = layui.$, active = {
+                    reload: function () {
+                        var demoReload = $('#qValue');
+                        //console.log(demoReload.val());
+                        //var k= $("#qKey").val();
+                        var data = [{
+                            FieldName: $("#qKey").val(),
+                            SearchValue: $('#qValue').val()
+                        }];
+
+                        //执行重载
+                        table.reload('dialogGrid', {
+                            page: {
+                                curr: 1 //重新从第 1 页开始
+                            }
+                            , where: {
+                                keyword: JSON.stringify(data)
+                            }
+                        });
+                    },
+                    getCheckData: function () { //获取选中数据
+                        var checkStatus = table.checkStatus('dialogGrid')
+                            , data = checkStatus.data;
+                        //layer.alert(JSON.stringify(data));
+                        return data
+                    }
+                };
+                $('.qTable .layui-btn').on('click', function () {
+                    var type = $(this).data('type');
+                    active[type] ? active[type].call(this) : '';
+                });
+                getData = function () {
+                    var type = "getCheckData";
+                    var data = active[type] ? active[type].call(this) : '';
+                    if (data == undefined) {
+                        data = [];
+                    }
+                    return data;
+                }
+            });
+
+
+        </script>
+
+</body>
+
+</html>

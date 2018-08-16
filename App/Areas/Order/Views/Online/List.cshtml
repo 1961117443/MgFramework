@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "列表页面";
+    Layout = "~/Views/Shared/_Edit_Base.cshtml";
+}
+@section toolbar{ 
+<input id="q_search" class="easyui-searchbox" style="width:300px" data-options="searcher:quickSearch,menu:'#mm'" />
+<div id="mm" style="width:150px">
+    <div data-options="name:'BillCode',selected:true">订单号</div>
+    <div data-options="name:'OrderDate'">订单日期</div>
+    <div data-options="name:'CustomerID_Code'">客户编号</div>
+    <div data-options="name:'CustomerID_Name'">客户名称</div>
+    <div data-options="name:'DeliveryMethod'">送货方式</div>
+    <div data-options="name:'AcceptDate'">预交日期</div>
+    <div data-options="name:'PackingID_PackingName'">包装方式</div>
+    <div data-options="name:'Project'">所属工程</div>
+    <div data-options="name:'OrderType'">订单类型</div>
+    <div data-options="name:'CustomerPO'">客户PO</div>
+    <div data-options="name:'AluminumPriceDate'">铝锭价日期</div>
+</div> 
+@*<input class="easyui-textbox" data-options="iconCls:'icon-search'" style="width:200px">
+<a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a>*@
+<a id="btn_add" href="/Order/Online/Create" class="easyui-linkbutton" data-options="iconCls:'bill-add'">新增</a>
+<input type="button" class="layui-btn" value="弹窗新增" onclick="onlineManager.ShowOrder();">
+@*<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit'" onclick="javascript:alert('edit')">修改</a>*@
+
+} 
+<table id="masterGrid">
+    <thead>
+        <tr>
+            <th data-options="field:'Id',formatter:onlineManager.formatOper" width="140px;"></th>
+            <th data-options="field:'BillCode'">订单号</th>
+            <th data-options="field:'OrderDate',formatter: com.html_formatter.datetime">订单日期</th>
+            <th hidden="hidden" data-options="field:'CustomerID'">客户ID</th>
+            <th data-options="field:'CustomerID_Code'">客户编号</th>
+            <th data-options="field:'CustomerID_Name'">客户名称</th>
+            <th data-options="field:'DeliveryMethod'">送货方式</th>
+            <th data-options="field:'AcceptDate',formatter: com.html_formatter.datetime">预交日期</th>
+            <th hidden="hidden" data-options="field:'PackingID'">包装ID</th>
+            <th data-options="field:'PackingID_PackingName'">包装方式</th>
+            <th data-options="field:'Project'">所属工程</th>
+            <th data-options="field:'OrderType'">订单类型</th>
+            <th data-options="field:'Remark'">备注</th>
+            <th data-options="field:'CustomerPO'">客户PO</th>
+            <th data-options="field:'AluminumPriceDate',formatter: com.html_formatter.datetime">铝锭价日期</th>
+        </tr>
+    </thead>
+</table>
+
+
+@section scripts{ 
+<script src="~/Scripts/04uijs/onlineorder.js?v=@ViewBag.ts"></script>
+    <script>
+        $(document).ready(function () {
+            onlineManager.Init();
+        } 
+        );
+        function quickSearch(v, n) {
+            var p = [{ FieldName: n, SearchValue: v }]; 
+            onlineManager.Search_Data(p); 
+        };
+    </script>
+    }

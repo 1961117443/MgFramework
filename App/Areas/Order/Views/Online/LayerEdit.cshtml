@@ -1,0 +1,170 @@
+﻿@model App.ViewModel.VD_SalesOrder
+
+@{
+    ViewBag.Title = Model.AutoID == 0 ? "新增页面" : "编辑页面";
+    Layout = "~/Views/Shared/_Edit_Base.cshtml";
+}
+<div class="widget-body">
+    <div class="form-actions formBtn">
+        <input type="button"  value="保存" class="layer-btn" onclick="onlineEdit.SaveChange('@Model.Id')">
+        <input type="button"  value="添加明细" class="layer-btn" onclick="onlineEdit.LayerCreateItem();">  
+    </div>
+    <br />
+    <div class="row-fluid" @*style="border: 1px solid #DDDDDD;"*@>
+        <div class="widget-body form">
+            <form id="mainForm" class="horizontal-form">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="BillCode" name="BillCode" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'订单号',labelPosition:'top',prompt:'可不填,自动生成'" readonly @*disabled="disabled"*@ value="@Model.BillCode" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="OrderDate" name="OrderDate" class="user-edit easyui-datebox" style="width:100%;" data-options="required:true,label:'订单日期',labelPosition:'top',prompt:''" value="@Model.OrderDate" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="hidden" />
+                                <input type="text" id="CustomerID_Code" name="CustomerID_Code" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'客户编号',labelPosition:'top',prompt:'',icons:[{iconCls:'bill-browse',handler:com.ShowChooseBox,param:{url:'/BaseData/Customer/ShowDialog',ok:onlineManager.setCustomerData}}]" value="@Model.CustomerID_Code" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="CustomerID_Name" name="CustomerID_Name" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'客户名称',labelPosition:'top',prompt:'',icons:[{iconCls:'bill-browse',handler:com.ShowChooseBox,param:{url:'/BaseData/Customer/ShowDialog',ok:onlineManager.setCustomerData}}]" value="@Model.CustomerID_Name" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="AcceptDate" name="AcceptDate" class="user-edit easyui-datebox" style="width:100%;" data-options="label:'预交日期',labelPosition:'top',prompt:'输入搜索关键字'" placeholder="输入搜索关键字" value="@Model.AcceptDate" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="PackingID_PackingName" name="PackingID_PackingName" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'包装方式',labelPosition:'top',prompt:'',icons:[{iconCls:'bill-browse',handler:com.ShowChooseBox,param:{url:'/BaseData/Packing/ShowDialog',ok:onlineManager.setPackData}}]" value="@Model.PackingID_PackingName" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="Project" name="Project" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'所属工程',labelPosition:'top',prompt:''" value="@Model.Project" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="CustomerPO" name="CustomerPO" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'客户PO',labelPosition:'top',prompt:''" value="@Model.CustomerPO" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="AluminumPriceDate" name="AluminumPriceDate" class="user-edit easyui-datebox" style="width:100%;" data-options="label:'铝锭价日期',labelPosition:'top',prompt:''" onfocus="WdatePicker()" value="@Model.AluminumPriceDate" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="Remark" name="Remark" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'备注',labelPosition:'top',prompt:''" value="@Model.Remark" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input id="OrderType" name="OrderType"
+                                       style="width:100%;"
+                                       value="@Model.OrderType"
+                                       data-options="
+                                       label:'订单等级',
+                                       labelPosition:'top',
+                                       prompt:'请选择',
+                                       valueField:'id',
+                                       textField:'text',
+                                       data:[
+                                        {id:'正常',text:'正常'},
+                                        {id:'加急',text:'加急'}
+                                       ]" class="user-edit easyui-combobox" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <input hidden="hidden" id="Id" name="Id" value="@Model.Id" />
+                    @Html.Hidden("AutoID", Model.AutoID)
+                    @Html.Hidden("CustomerID", Model.CustomerID)
+                    @Html.Hidden("PackingID", Model.PackingID)
+                </div>
+            </form>
+        </div>
+    </div>
+    <table class="easyui-datagrid" id="tabInfo">
+        <thead>
+            <tr class="widget-title">
+                <th width="100px;" data-options="field:'Id',formatter:onlineEdit.formatOper">操作</th>
+                <th class="hidden-480" data-options="field:'SalesOrderTraceCode'">订单跟踪号</th>
+                <th class="hidden-480" hidden="hidden" data-options="field:'SectionBarID'">型材id</th>
+                <th class="hidden-480" data-options="field:'SectionBarID_Code'">型材型号</th>
+                <th class="hidden-480" data-options="field:'SectionBarID_Name'">型材名称</th>
+                <th class="hidden-480" data-options="field:'TotalQuantity',align:'right'">订单数</th>
+                <th class="hidden-480" data-options="field:'OrderLength',align:'right'">订单长度</th>
+                <th class="hidden-480" data-options="field:'WallThickness'">壁厚</th>
+                <th class="hidden-480" data-options="field:'FilmThickness'">膜厚</th>
+                <th class="hidden-480" data-options="field:'TheoryMeter',align:'right'">理论米重</th>
+                <th class="hidden-480" data-options="field:'TheoryWeight',align:'right'">理论重量</th>
+                <th class="hidden-480" hidden="hidden" data-options="field:'SurfaceID'">表面id</th>
+                <th class="hidden-480" data-options="field:'SurfaceID_Name'">表面名称</th>
+                <th class="hidden-480" hidden="hidden" data-options="field:'PackingID'">包装id</th>
+                <th class="hidden-480" data-options="field:'PackingID_PackingName'">包装方式</th>
+                <th class="hidden-480" data-options="field:'OrderLevel'">订单等级</th>
+                <th width="200px;" class="hidden-480" data-options="field:'Remark'">备注</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div> 
+
+<div id="selectedData"></div>
+
+
+@section scripts{
+    <script src="~/Scripts/04uijs/onlineorder.js?v=@ViewBag.ts"></script>
+    <script>
+
+    $(document).ready(
+        function () {
+            onlineEdit.Init();
+        }
+    );
+    </script> 
+
+}

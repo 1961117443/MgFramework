@@ -1,0 +1,32 @@
+
+ 
+记录时间：2018-07-31 13:03:02,146 
+线程ID:[9] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-31 14:09:14,325 
+线程ID:[9] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-31 14:10:25,577 
+线程ID:[10] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-31 19:08:16,409 
+线程ID:[10] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 

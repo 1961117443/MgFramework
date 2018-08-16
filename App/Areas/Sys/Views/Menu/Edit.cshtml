@@ -1,0 +1,127 @@
+﻿@model App.ViewModel.VD_Sys_Menu
+
+@{
+    ViewBag.Title = Model.AutoID == 0 ? "新增页面" : "编辑页面";
+    Layout = "~/Views/Shared/_Edit_Base.cshtml";
+}
+<div class="widget-body">  
+    <div class="row-fluid" @*style="border: 1px solid #DDDDDD;"*@>
+        <div class="widget-body form">
+            <form id="mainForm" class="horizontal-form">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="MenuCode" name="MenuCode" class="user-edit easyui-textbox" style="width:100%;" data-options="required:true,label:'菜单代码',labelPosition:'top'" value="@Model.MenuCode" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="MenuName" name="MenuName" class="user-edit easyui-textbox" style="width:100%;" data-options="required:true,label:'菜单名称',labelPosition:'top',prompt:''" value="@Model.MenuName" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="hidden" />
+                                <input type="text" id="ParentId_Code" name="ParentId_Code" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'父级菜单代码',labelPosition:'top',prompt:'不填写为顶级菜单',icons:[{iconCls:'bill-browse',handler:com.ShowChooseBox,param:{url:'/Sys/Menu/ShowDialog',ok:menuEdit.setData}}]" value="@Model.ParentId_Code" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="MenuType" name="MenuType" class="user-edit easyui-combobox" style="width:100%;" data-options="label:'菜单类型',labelPosition:'top',prompt:'',limitToList:true,valueField:'id',textField:'value',data:[{id:0,value:'未定义'},{id:1,value:'目录'},{id:2,value:'页面'}]" value="@Model.MenuType" /> 
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="ButtonMode" name="ButtonMode" class="user-edit easyui-combobox" style="width:100%;" data-options="label:'按钮模式',labelPosition:'top',limitToList:true,valueField:'id',textField:'value',data:[{id:0,value:'未定义'},{id:1,value:'动态按钮'},{id:2,value:'静态按钮'},{id:2,value:'无按钮'}]" value="@Model.ButtonMode" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="Url" name="Url" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'菜单导航URL',labelPosition:'top',prompt:''" value="@Model.Url" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="IconClass" name="IconClass" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'图标class',labelPosition:'top',prompt:''" value="@Model.IconClass" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="Sort" name="Sort" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'排序',labelPosition:'top',prompt:''" value="@Model.Sort" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="control-group">
+                            <div class="controls">
+                                <div style="height:30px;"></div>
+                                <input id="Enabled" name="Enabled" class="user-edit easyui-switchbutton" style="width:100%;" data-options="onText:'启用',offText:'停用'" value="@Model.Enabled" @(Model.Enabled==1?"checked":"") />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span9">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" id="Remark" name="Remark" class="user-edit easyui-textbox" style="width:100%;" data-options="label:'备注',labelPosition:'top',prompt:''" value="@Model.Remark" />
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>  
+                </div> 
+                <div class="span3">
+                    <input hidden="hidden" id="Id" name="Id" value="@Model.Id" />
+                    @Html.Hidden("AutoID", Model.AutoID)
+                    @Html.Hidden("CustomerID", Model.ParentId)
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@*<div id="editItemForm">
+
+    </div>*@
+
+<div id="selectedData"></div>
+
+
+@section scripts{
+    <script src="~/Scripts/04uijs/menu.js?v=@ViewBag.ts"></script>
+    <script>
+
+        $(document).ready(
+            function () {
+                menuEdit.Init();
+            }
+        );
+    </script>
+
+}

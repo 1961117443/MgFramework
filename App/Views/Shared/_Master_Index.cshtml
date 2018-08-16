@@ -1,0 +1,41 @@
+﻿
+@{
+    //ViewBag.Title = "_Master_Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}  
+ @*class="easyui-panel" *@
+<div class="_Master"  style="padding:0px 10px;"  >
+    <div  class="_Master easyui-panel" id="_Master_Index" title="@ViewBag.Title"
+         style="padding:10px;background:#fafafa;"
+         data-options="iconCls:'',fit:true"> 
+        <div id="_Master_Top" class="_Master">
+            <div class="_Master" style="padding:5px 0px;">
+                @RenderSection("toolbar", required: false)
+            </div> 
+        </div>
+        <div id="_Master_Content" class="_Master">
+            @RenderBody()
+        </div>
+    </div> 
+</div>
+    
+
+@section head{
+    <style>
+        ._Master{
+            height:auto !important;
+            /*height:344px;
+            min-height:344px;*/
+            /*border: 1px solid #ff0000*/
+        }
+    </style>
+   @RenderSection("head", required: false)
+    }
+
+
+
+
+    @section scripts{  
+        @RenderSection("scripts", required: false)  
+    }
+

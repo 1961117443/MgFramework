@@ -1,0 +1,39 @@
+﻿
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+} 
+<body class="childrenBody">
+    <blockquote class="layui-elem-quote quoteBox">
+        <form class="layui-form">
+            @RenderSection("toolbar", required: false)
+        </form>
+    </blockquote>
+    @RenderBody()
+
+    @*<div class="_Base" style="padding:0px 20px;">
+            <div>
+                <div id="_Base_Top" class="_Base">
+                    <div class="_Base" style="padding:5px 0px;">
+                        @RenderSection("toolbar", required: false)
+                    </div>
+                </div>
+                <div id="_Base_Content" class="_Base">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>*@
+
+</body>
+
+
+@section head{ 
+    @RenderSection("head", required: false)
+}
+
+
+
+
+@section scripts{
+    @RenderSection("scripts", required: false)
+}
+

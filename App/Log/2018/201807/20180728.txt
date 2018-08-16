@@ -1,0 +1,821 @@
+
+ 
+记录时间：2018-07-28 14:44:03,029 
+线程ID:[28] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 14:44:07,051 
+线程ID:[28] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 14:44:12,205 
+线程ID:[26] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 14:44:19,843 
+线程ID:[28] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 14:56:57,414 
+线程ID:[38] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 14:57:02,306 
+线程ID:[29] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 14:57:09,507 
+线程ID:[29] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 14:57:10,922 
+线程ID:[39] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 14:57:11,889 
+线程ID:[32] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 15:07:55,382 
+线程ID:[11] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 15:08:08,190 
+线程ID:[11] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 15:08:09,160 
+线程ID:[14] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 15:08:09,645 
+线程ID:[12] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.MissingMethodException: 无法创建抽象类。 对象类型“Newtonsoft.Json.Linq.JToken”。 ---> System.MissingMethodException: 无法创建抽象类。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   在 System.Web.Mvc.DefaultModelBinder.BindSimpleModel(ControllerContext controllerContext, ModelBindingContext bindingContext, ValueProviderResult valueProviderResult)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.CreateEntryForModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type valueType, IModelBinder valueBinder, String modelName, Object modelKey)
+   在 System.Web.Mvc.DefaultModelBinder.UpdateDictionary(ControllerContext controllerContext, ModelBindingContext bindingContext, Type keyType, Type valueType)
+   在 System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   在 System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-07-28 15:18:04,935 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：账号不存在!
+ 
+
+ 
+记录时间：2018-07-28 15:18:11,288 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：账号不存在!
+ 
+
+ 
+记录时间：2018-07-28 15:18:16,392 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：账号不存在!
+ 
+
+ 
+记录时间：2018-07-28 15:18:19,976 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：账号不存在!
+ 
+
+ 
+记录时间：2018-07-28 15:18:23,891 
+线程ID:[14] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：账号不存在!
+ 
+
+ 
+记录时间：2018-07-28 15:20:34,212 
+线程ID:[12] 
+日志级别：  ERROR 
+出错类：Mg.Web.Core.Filters.LogExceptionAttribute property: [(null)] - 
+错误描述：在执行 controller[Account] 的 action[Login] 时产生异常
+ 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Mg.Framework.Service.Sys_UserService.Login(Sys_User sysUser)
+   在 App.Controllers.AccountController.Login(JObject data) 位置 E:\code\MangoGreen.Framework\App\Controllers\AccountController.cs:行号 43
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+
+ 
+记录时间：2018-07-28 15:20:47,824 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：账号不存在!
+ 
+
+ 
+记录时间：2018-07-28 15:20:49,945 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：账号不存在!
+ 
+
+ 
+记录时间：2018-07-28 15:20:50,680 
+线程ID:[6] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：账号不存在!
+ 
+
+ 
+记录时间：2018-07-28 15:20:51,122 
+线程ID:[14] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：账号不存在!
+ 
+
+ 
+记录时间：2018-07-28 15:20:51,403 
+线程ID:[6] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：账号不存在!
+ 
+
+ 
+记录时间：2018-07-28 15:21:41,179 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：账号不存在!
+ 
+
+ 
+记录时间：2018-07-28 15:21:45,633 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:21:52,372 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:30:08,746 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:30:10,658 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:30:11,311 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:30:11,870 
+线程ID:[14] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:30:12,434 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:30:13,148 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:30:16,590 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:30:18,808 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:30:22,358 
+线程ID:[14] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:30:27,412 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:31:05,869 
+线程ID:[14] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:31:12,526 
+线程ID:[14] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:31:14,926 
+线程ID:[15] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:31:17,660 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:31:58,334 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:32:04,356 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:33:03,760 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:34:07,548 
+线程ID:[14] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:34:25,360 
+线程ID:[12] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:34:34,963 
+线程ID:[14] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:35:16,094 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:35:22,208 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:36:32,819 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:36:42,035 
+线程ID:[17] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录失败！账号：admin，密码：admin。原因：成功
+ 
+
+ 
+记录时间：2018-07-28 15:37:05,995 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:38:21,886 
+线程ID:[17] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:38:57,503 
+线程ID:[11] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:26,702 
+线程ID:[19] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:32,195 
+线程ID:[17] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:35,510 
+线程ID:[19] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:36,491 
+线程ID:[17] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:37,173 
+线程ID:[26] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:37,739 
+线程ID:[19] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:38,273 
+线程ID:[19] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:38,813 
+线程ID:[19] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:39,314 
+线程ID:[19] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:39,825 
+线程ID:[19] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:40,482 
+线程ID:[21] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:39:47,232 
+线程ID:[17] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:40:22,041 
+线程ID:[21] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:40:42,280 
+线程ID:[26] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:40:59,954 
+线程ID:[26] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:43:47,909 
+线程ID:[26] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 
+
+ 
+记录时间：2018-07-28 15:50:03,748 
+线程ID:[39] 
+日志级别：  INFO  
+出错类：App.Controllers.AccountController property: [(null)] - 
+错误描述：登录成功！用户：系统管理员，账号：admin，密码：---
+ 

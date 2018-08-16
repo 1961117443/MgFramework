@@ -1,0 +1,191 @@
+﻿@using Mg.IOSerialize.Serialize
+@model App.ViewModel.VD_SalesOrderDetail
+@{
+    Layout = "~/Views/Shared/_Edit_Base.cshtml";
+}
+
+<div> 
+    <form id="editItemForm" class="layui-form" method="post" lay-filter="detailItemForm">
+        <input type="text" name="Id" class="layui-hide">
+        <input type="text" name="SalesOrderTraceCode" class="layui-hide">
+        <input type="text" name="InID" class="layui-hide">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label" style="color:#ff0000">型材型号</label>
+            <div class="layui-input-block">
+                <input type="text" name="SectionBarID" class="layui-hide">
+                <input type="text" name="SectionBarID_Code" lay-verify="required" autocomplete="off" placeholder="双击选择" ondblclick="ShowChooseBox('SectionBarID');" lay-filter="SectionBarID" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">型材名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="SectionBarID_Name" lay-verify="required" placeholder="双击选择" autocomplete="off" readonly  lay-filter="SectionBarID" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">表面名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="SurfaceID" class="layui-hide">
+                <input type="text" name="SurfaceID_Name" placeholder="双击选择"  ondblclick="ShowChooseBox('SurfaceID');" lay-filter="SurfaceID_Name" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">包装方式</label>
+            <div class="layui-input-block">
+                <input type="text" name="PackingID" class="layui-hide">
+                <input type="text" name="PackingID_PackingName" placeholder="双击选择" ondblclick="ShowChooseBox('PackingID');" lay-filter="PackingID_PackingName" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+
+            <div class="layui-inline">
+                <label class="layui-form-label" style="color:#ff0000">订单数</label>
+                <div class="layui-input-inline">
+                    <input type="number" name="TotalQuantity" lay-verify="required|number" placeholder="支" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label" for="OrderLength" style="color:#ff0000">订单长度</label>
+                <div class="layui-input-inline">
+                    <input type="number" name="OrderLength" lay-verify="required|number" placeholder="m" step="0.0001" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">膜厚</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="FilmThickness" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+
+            <div class="layui-inline">
+                <label class="layui-form-label">理论米重</label>
+                <div class="layui-input-inline">
+                    <input type="number" name="TheoryMeter" step="0.001" placeholder="kg/m" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">壁厚</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="WallThickness" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">订单等级</label>
+                <div class="layui-input-inline">
+                    <select name="OrderLevel" lay-filter="OrderLevel">
+                        <option value=""></option>
+                        <option>正常</option>
+                        <option>加急</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">明细备注</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea" name="Remark"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="updateItem">保存</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<style type="text/css">
+    *,
+    *:before,
+    *:after {
+        box-sizing: unset;
+    }
+</style>
+
+
+@section scripts{
+    <script src="~/Scripts/04uijs/order.js"></script>
+    <script>
+        layui.use('form', function () {
+            var form = layui.form;
+
+            //各种基于事件的操作，下面会有进一步介绍
+            form.on('submit(updateItem)', function (data) { 
+                com.ajax({
+                    url: 'EditItem/id=' + data.field.Id,  
+                    showLoading:true,
+                    data: data.field, 
+                    callback: function (r) {  
+                        if (r.s) {
+                            var index = parent.layer.getFrameIndex(window.name);
+                           // console.log(parent.$("#gridDetailList"));
+                            parent.layer.close(index);
+                        }
+                        
+                    }
+                });
+                return false;
+            }); 
+
+
+            var data = JSON.parse('@Html.Raw(JsonHelper.ToJson(Model))'); 
+            form.val('detailItemForm', data); 
+        });
+        //选择数据
+        function ShowChooseBox(data) {
+            var opt = {};
+            var sumbit = function () { };
+            switch (data) {
+                case "SectionBarID":
+                    opt = {
+                        title: '选择型号',
+                        content: '/BaseData/SectionBar/Dialog'
+                    };
+                    sumbit = function (data) {
+                        if (data && data.length > 0) {
+                            $("#editItemForm input[name='SectionBarID']").val(data[0].Id);
+                            $("#editItemForm input[name='SectionBarID_Code']").val(data[0].Code);
+                            $("#editItemForm input[name='SectionBarID_Name']").val(data[0].Name);
+                            $("#editItemForm input[name='TheoryMeter']").val(data[0].Theoreticalweight);
+                            $("#editItemForm input[name='WallThickness']").val(data[0].WallThickness);
+                        } 
+                    }; 
+                    break;
+                case "PackingID":
+                    opt = {
+                        title: '选择包装',
+                        content: '/BaseData/Packing/Dialog'
+                    };
+                    sumbit = function (data) {
+                        if (data && data.length > 0) {
+                            $("#editItemForm input[name='PackingID']").val(data[0].Id); 
+                            $("#editItemForm input[name='PackingID_PackingName']").val(data[0].PackingName); 
+                        }
+                    };
+                    break;
+                case "SurfaceID":
+                    opt = {
+                        title: '选择表面',
+                        content: '/BaseData/Surface/Dialog'
+                    };
+                    sumbit = function (data) {
+                        if (data && data.length > 0) {
+                            $("#editItemForm input[name='SurfaceID']").val(data[0].Id);
+                            $("#editItemForm input[name='SurfaceID_Name']").val(data[0].SurfaceName);
+                        }
+                    };
+                    break;
+                default: 
+                    return;
+            }
+            com.ShowChooseDialog(opt, sumbit); 
+        }; 
+    </script>
+}
